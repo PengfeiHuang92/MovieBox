@@ -6,7 +6,7 @@
 }
 
 .title{
-  font-size: 4.4rem;
+  font-size: 8vw;
   text-align: center;
 }
 .has-search .form-control {
@@ -37,6 +37,13 @@
 .SearchBox button{
   border-radius: 30px;
   width: 10vw;
+ 
+}
+.SearchBox button p {
+  margin-top: 1vw;
+  text-align: center;
+  font-size: 2vw;
+ 
 }
 .SearchBox button:hover{
   background-color: #000000;
@@ -88,10 +95,3 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 300px) {
-
-  .SearchBox input{
-    border-radius: 10px;
-  }
-
-}

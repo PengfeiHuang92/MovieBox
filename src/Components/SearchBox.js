@@ -13,7 +13,7 @@ const SearchBox = ({btnOnClick}) => {
             <input type="text" placeholder="Movie Name" value={query} onChange={(e) => setQuery(e.target.value)}/>
         
                 <button type="button" onClick={searchBtnFun}>
-                    Search
+                   <p> Search </p>
                 </button>
         
         </div>
