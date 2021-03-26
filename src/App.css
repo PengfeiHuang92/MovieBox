@@ -30,7 +30,7 @@
 }
 .SearchBox input{
   padding: 2%;
-  margin-right: 1%;
+  margin-right: 2%;
   width: 60vw;
   border-radius: 10px;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
@@ -38,12 +38,13 @@
 .SearchBox button{
   border-radius: 30px;
   width: 10vw;
- 
+  min-width: 80px;
 }
 .SearchBox button p {
   margin-top: 1vw;
   text-align: center;
   font-size: 2vw;
+  
  
 }
 .SearchBox button:hover{
@@ -95,4 +96,3 @@
   color: #FFFFFF;
   cursor: pointer;
 }
-
