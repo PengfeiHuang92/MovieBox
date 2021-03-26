@@ -40,6 +40,7 @@
 }
 .SearchBox button:hover{
   background-color: #000000;
+  color: #FFFFFF;
 }
 
 /* Movie Card*/
