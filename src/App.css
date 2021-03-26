@@ -26,7 +26,6 @@
 }
 .SearchBox{
   display: flex;
-
 }
 .SearchBox input{
   padding: 2%;
@@ -44,8 +43,8 @@
   margin-top: 1vw;
   text-align: center;
   font-size: 2vw;
-  
- 
+  font-family: 'Courier New', Courier, monospace;
+
 }
 .SearchBox button:hover{
   background-color: #000000;
