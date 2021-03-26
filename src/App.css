@@ -46,10 +46,7 @@
 /* Movie Card*/
 *{
   font-family: 'Poppins', sans-serif;
-   -webkit-user-select: none;
-    -moz-user-select: -moz-none;
-    -o-user-select: none;
-    user-select: none;
+  
 }
 
 .movie_card{
