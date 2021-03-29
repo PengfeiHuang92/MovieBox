@@ -8,6 +8,7 @@ const Popup = (props) => {
                 <button className="close-btn" onClick={() => props.setTriggerBtn(false)}>X</button>
                 <iframe title="trailerPlay" className="player" type="text/html"
                     src={props.movieURL}
+                    frameborder="1" allowFullScreen
                     ></iframe>
             </div>
         </div>
