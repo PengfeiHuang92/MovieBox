@@ -21,7 +21,7 @@ const Movies = ({ movies }) => {
                 console.log("popup", data.results);
                 data.results.map((movie) => {
                     if (movie.type === "Trailer") 
-                        setMovieURL('//www.youtube.com/embed/' + movie.key);
+                        setMovieURL('https://www.youtube.com/embed/' + movie.key);
                     return null;
                 })
             } catch (error) {
