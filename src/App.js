@@ -23,7 +23,7 @@ function App() {
   }
  
   const SearchBtn =(query)=>{
-    const url = 'https://api.themoviedb.org/3/search/movie?api_key=df5581abcc596f7cc9ede3b8ad4ff802&query='+query;
+    const url = 'https://api.themoviedb.org/3/search/movie?api_key=df5581abcc596f7cc9ede3b8ad4ff802&query='+query+'&page=1';
     if(query){
       getMovies(url);
     }
@@ -41,6 +41,7 @@ function App() {
 
       <div className="container" >
         <Header />
+        
         <SearchBox btnOnClick={SearchBtn}/>
         <Movies movies= {movies} />
       </div>
