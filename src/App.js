@@ -32,10 +32,7 @@ function App() {
   useEffect(() => {
     if(!btnClicked){
       getMovies(urlPopular)
-    }else{
-      console.log("aaaaa");
     }
-       
   });
     return (
 
