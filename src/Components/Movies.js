@@ -19,10 +19,13 @@ const Movies = ({ movies }) => {
                 const res = await fetch(url);
                 const data = await res.json();
                 console.log("popup", data.results);
+                const hasURL = false;
                 data.results.map((movie) => {
-                    if (movie.type === "Trailer") 
+                    if ( (movie.type === "Trailer" || movie.type === "Teaser") && !hasURL ) {
                         setMovieURL('https://www.youtube.com/embed/' + movie.key);
-                    return null;
+                        hasURL = true;
+                    }
+                        
                 })
             } catch (error) {
                 console.log(error);
@@ -54,7 +57,7 @@ const Movies = ({ movies }) => {
                 setTriggerBtn : function
                 movieURL : string
             */}
-            <Popup trigger={triggerBtn} setTriggerBtn={setTriggerBtn} movieURL={movieURL} >  </Popup>
+            <Popup trigger={triggerBtn} setTriggerBtn={setTriggerBtn} movieURL={movieURL} setMovieURL={setMovieURL} >  </Popup>
 
         </div>
     )

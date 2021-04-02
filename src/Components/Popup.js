@@ -1,14 +1,17 @@
 import React from 'react'
 
 const Popup = (props) => {
-
+    const closePop = ()=>{
+        props.setTriggerBtn(false);
+        props.setMovieURL('');
+    }
     return (props.trigger) ? (
         <div className="popup">
             <div className="popup-inner">
-                <button className="close-btn" onClick={() => props.setTriggerBtn(false)}>X</button>
+                <button className="close-btn" onClick={() => closePop()}>X</button>
                 <iframe title="trailerPlay" className="player" type="text/html"
                     src={props.movieURL}
-                    frameborder="1" allowFullScreen
+                    frameBorder="1" allowFullScreen
                     ></iframe>
             </div>
         </div>
