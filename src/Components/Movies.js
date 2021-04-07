@@ -62,9 +62,11 @@ const Movies = ({ movies, hasMore, setPageNumber }) => {
                             </button>
                             <div className="card-body">
 
-                                <h5 className="card-title" ref={lastMovieRef}>{movie.title}</h5>
+                                <h5 className="card-title" ref={lastMovieRef} >
+                           
+                                    {movie.title.length  < 35 ? movie.title : movie.title.substring(0, 35)+'...'}</h5>
                                 <span className="movie_info">{movie.release_date}</span>
-                                <span className="movie_info float-right">Rate:<strong>{movie.vote_average}</strong></span>
+                                <span className="movie_info float-right">Ratea:<strong>{movie.vote_average}</strong></span>
                             </div>
                         </div>
                     } else {
@@ -74,10 +76,9 @@ const Movies = ({ movies, hasMore, setPageNumber }) => {
                                 Trailer
                             </button>
                             <div className="card-body">
-
-                                <h5 className="card-title">{movie.title}</h5>
+                                <h5 className="card-title" >{movie.title}</h5>
                                 <span className="movie_info">{movie.release_date}</span>
-                                <span className="movie_info float-right">Rate:<strong>{movie.vote_average}</strong></span>
+                                <span className="movie_info float-right">Ratea:<strong>{movie.vote_average}</strong></span>
                             </div>
                         </div>
                     }

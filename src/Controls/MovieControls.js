@@ -40,13 +40,16 @@ export default function MovieControls(query, pageNumber, setPageNumber) {
 
         axios(state).then(res => {
             setMovies(preMovies => {
-                
+                if(res.data.page == res.data.total_pages){
+                    setHasMore(false)
+                }
                 if (res.data.page <= res.data.total_pages) {
                     return [...preMovies, ...res.data.results]
                 } else {
-                    setHasMore(false)
+                    
                     return [...preMovies]
                 }
+                
             })
         })
 
