@@ -1,24 +1,11 @@
 import React from 'react'
-import { useState } from 'react';
-const SearchBox = ({ btnOnClick }) => {
-    const [query, setQuery] = useState('');
-
-    const searchBtnFun = (e) => {
-        e.preventDefault();
-
-        btnOnClick(query);
-    }
+const SearchBox = ({ setQuery }) => {
+  
     return (
         <div >
             <form className="SearchBox">
-                <input type="text" placeholder="Movie Name" value={query} onChange={(e) => setQuery(e.target.value)} />
-
-                <button onClick={searchBtnFun} type="submit">
-                    Search
-                </button>
+                <input type="text" placeholder="Movie Name"  onChange={(e) => {setQuery(e.target.value)}} />
             </form>
-
-
         </div>
     )
 }
