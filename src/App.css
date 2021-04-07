@@ -58,8 +58,8 @@
 .movie_card{
   display: inline-flex;
   padding: 0 !important;
-  width: 14rem;
-  margin:14px; 
+  width: 15rem;
+  margin: 10px;
   min-width: none;
   border-radius: 10px;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
@@ -137,7 +137,7 @@
     display: inline-flex;
     padding: 0 !important;
     width: 100%;
-    padding: auto;
+    margin: 2px;
     min-width: none;
     border-radius: 10px;
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
