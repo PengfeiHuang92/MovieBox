@@ -29,10 +29,10 @@
 }
 
 .SearchBox input{
-
+  align-items: center;
   padding: 2%;
   margin-right: 2%;
-  width: 70vw;
+  width: 80vw;
   border-radius: 30px;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
 }
