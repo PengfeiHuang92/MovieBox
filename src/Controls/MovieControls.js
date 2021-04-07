@@ -29,7 +29,7 @@ export default function MovieControls(query, pageNumber, setPageNumber) {
     }, [query])
 
     //show popular movies when query is empty
-    if (query!=null) {
+    if (query) {
         state = search;
     } else {
         state = popul;
