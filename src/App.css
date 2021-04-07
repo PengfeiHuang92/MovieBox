@@ -1,8 +1,6 @@
 .container{
   margin: 0 auto;
   padding:40px;
-
-
 }
 
 .title{
@@ -140,9 +138,14 @@
     display: inline-flex;
     padding: 0 !important;
     width: 100%;
-    margin:14px; 
+    align-items: center;
     min-width: none;
     border-radius: 10px;
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
   }
+  .container{
+    align-items: center;
+    text-align: center;
+  }
+  
 }

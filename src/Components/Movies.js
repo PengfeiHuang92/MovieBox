@@ -59,7 +59,7 @@ const Movies = ({ movies, hasMore, setPageNumber }) => {
                             <img className="movie-image" src={'https://image.tmdb.org/t/p/original/' + movie.poster_path} alt={movie.title} />
                             <button className="play_button" onClick={() => (onClickFun(movie.id))}>
                                 Trailer
-                          </button>
+                            </button>
                             <div className="card-body">
 
                                 <h5 className="card-title" ref={lastMovieRef}>{movie.title}</h5>
@@ -72,7 +72,7 @@ const Movies = ({ movies, hasMore, setPageNumber }) => {
                             <img className="movie-image" src={'https://image.tmdb.org/t/p/original/' + movie.poster_path} alt={movie.title} />
                             <button className="play_button" onClick={() => (onClickFun(movie.id))}>
                                 Trailer
-                          </button>
+                            </button>
                             <div className="card-body">
 
                                 <h5 className="card-title">{movie.title}</h5>
