@@ -32,12 +32,13 @@ const Movies = ({ movies, hasMore, setPageNumber }) => {
         const url = 'https://api.themoviedb.org/3/movie/' + id + '/videos?api_key=df5581abcc596f7cc9ede3b8ad4ff802&language=en-US';
         if (id) {
             try {
+                //Fetch
                 const res = await fetch(url);
                 const data = await res.json();
-                console.log("popup", data.results);
+                
                 let hasURL = false;
                 data.results.map((movie) => {
-                    if ((movie.type.indexOf("Trailer") != -1 || movie.type === "Teaser") && !hasURL) {
+                    if ((movie.type.indexOf("Trailer") !== -1 || movie.type === "Teaser") && !hasURL) {
                         setMovieURL('https://www.youtube.com/embed/' + movie.key);
                         hasURL = true;
                     }
@@ -53,10 +54,11 @@ const Movies = ({ movies, hasMore, setPageNumber }) => {
         <div>
             {
                 /* Mapping though the movies*/
-                movies.filter(movie => movie.poster_path).map((movie, index) => {
+                movies.filter(movie => movie.poster_path).map((movie) => {
                     if (hasMore) {
                         return <div className='card movie_card' key={movie.id} >
                             <img className="movie-image" src={'https://image.tmdb.org/t/p/original/' + movie.poster_path} alt={movie.title} />
+                         
                             <button className="play_button" onClick={() => (onClickFun(movie.id))}>
                                 Trailer
                             </button>
@@ -72,7 +74,7 @@ const Movies = ({ movies, hasMore, setPageNumber }) => {
                     } else {
                         return <div className='card movie_card' key={movie.id} >
                             <img className="movie-image" src={'https://image.tmdb.org/t/p/original/' + movie.poster_path} alt={movie.title} />
-                            <button className="play_button" onClick={() => (onClickFun(movie.id))}>
+                           <button className="play_button" onClick={() => (onClickFun(movie.id))}>
                                 Trailer
                             </button>
                             <div className="card-body">
@@ -89,6 +91,7 @@ const Movies = ({ movies, hasMore, setPageNumber }) => {
                 trigger : boolean
                 setTriggerBtn : function
                 movieURL : string
+                setMovieURL : function
             */}
             <Popup trigger={triggerBtn} setTriggerBtn={setTriggerBtn} movieURL={movieURL} setMovieURL={setMovieURL} >  </Popup>
 

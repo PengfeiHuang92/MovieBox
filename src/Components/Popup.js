@@ -5,14 +5,17 @@ const Popup = (props) => {
         props.setTriggerBtn(false);
         props.setMovieURL('');
     }
+    
     return (props.trigger) ? (
         <div className="popup">
             <div className="popup-inner">
                 <button className="close-btn" onClick={() => closePop()}>X</button>
-                <iframe title="trailerPlay" className="player" type="text/html"
+                {
+                    props.movieURL ? <iframe title="trailerPlay" className="player" type="text/html"
                     src={props.movieURL}
                     frameBorder="1" allowFullScreen
-                    ></iframe>
+                    ></iframe> : <div className="player" > <h3>Sorry, there is no trail for this movie...</h3></div>
+                }
             </div>
         </div>
     ) : "";
